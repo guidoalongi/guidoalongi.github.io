@@ -4,7 +4,7 @@
     margin: 20px;
 }
 #section2{
-    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-image: url(/ejercicios/ejercicio4/img/windowsXpWallpaper.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -27,19 +27,19 @@
     margin: 40px;
 }
 #section7{
-    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-image: url(/ejercicios/ejercicio4/img/windowsXpWallpaper.jpg);
     background-repeat: no-repeat;
     background-position: bottom right;
 }
 #section8{
-    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-image: url(/ejercicios/ejercicio4/img/windowsXpWallpaper.jpg);
     background-size: 50%;
     background-repeat: repeat-y;
     background-position: bottom right;
 }
 #section9{
     background-color: lightgreen;
-    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-image: url(/ejercicios/ejercicio4/img/windowsXpWallpaper.jpg);
     background-repeat: repeat-y;
     background-position: bottom right;
 }
