@@ -1,0 +1,55 @@
+#section1{
+    background-color: lightblue;
+    padding: 15px;
+    margin: 20px;
+}
+#section2{
+    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#section3{
+    border: 2px solid red;
+    border-radius: 10px;
+}
+#section4{
+    font-weight: bold;
+    border: 2px black;
+    padding: 10px;
+}
+#divSection5{
+    background-color: yellow;
+    text-align: center;
+}
+#section6{
+    background-color: gold;
+    border: 5px double purple;
+    margin: 40px;
+}
+#section7{
+    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+#section8{
+    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-size: 50%;
+    background-repeat: repeat-y;
+    background-position: bottom right;
+}
+#section9{
+    background-color: lightgreen;
+    background-image: url(/TP4/img/windowsXpWallpaper.jpg);
+    background-repeat: repeat-y;
+    background-position: bottom right;
+}
+#buttonSection9{
+    background-color: lightblue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#section10{
+    width: 50%;
+    border: 3px dotted green; 
+    padding: 25px;
+}

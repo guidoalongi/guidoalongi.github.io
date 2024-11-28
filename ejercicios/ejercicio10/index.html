@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel con Lightbox, Botón de Compartir y Parallax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        .parallax {
+            background-image: url("imgs/f1.jpg");
+            height: 600px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }
+        .carousel, .content-slider {
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
+        .share-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            width: fit-content;
+        }
+        .share-button:hover {
+            background-color: #20b258;
+        }
+        .content-slider .slide {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .content-slider .slide.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax"></div>
+
+    <div class="carousel">
+        <div>
+            <a href="imgs/colapinto.jpg" data-lightbox="carousel" data-title="Colapinto">
+                <img src="imgs/colapinto.jpg" alt="Colapinto">
+            </a>
+        </div>
+        <div>
+            <a href="imgs/ferrari.jpg" data-lightbox="carousel" data-title="Ferrari">
+                <img src="imgs/ferrari.jpg" alt="Ferarri">
+            </a>
+        </div>
+        <div>
+            <a href="imgs/redBull.jpg" data-lightbox="carousel" data-title="Red Bull">
+                <img src="imgs/redBull.jpg" alt="Red Bull">
+            </a>
+        </div>
+    </div>
+
+        <div class="content-slider">
+            <div class="slide active">Contenido 1: Franco Colapinto en Interlagos.</div>
+            <div class="slide">Contenido 2: Pelea de escuderias en Austin</div>
+            <div class="slide">Contenido 3: Sergio Perez con su Red Bull</div>
+        </div>
+
+        <a id="share-button" class="share-button" href="#" target="_blank">Compartir en WhatsApp</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+
+            $('.content-slider').slick({
+                autoplay: false,
+                dots: true,
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+
+            $('.carousel').on('afterChange', function(event, slick, currentSlide) {
+                $('.content-slider .slide').removeClass('active').hide().css('opacity', 0);
+                $('.content-slider .slide').eq(currentSlide).addClass('active').show().css('opacity', 1);
+                
+                const currentImage = $('.carousel').find('.slick-current img').attr('src');
+                $('#share-button').attr('href', `https://api.whatsapp.com/send?text=Mira esta imagen: ${encodeURIComponent(currentImage)}`);
+            });
+
+            const initialImage = $('.carousel').find('.slick-current img').attr('src');
+            $('#share-button').attr('href', `https://api.whatsapp.com/send?text=Mira esta imagen: ${encodeURIComponent(initialImage)}`);
+        });
+    </script>
+
+</body>
+</html>

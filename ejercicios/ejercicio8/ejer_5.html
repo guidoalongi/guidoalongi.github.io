@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer_5</title>
+
+    <script>
+        // Generar un número aleatorio entre 0 y 10
+        var numeroAdivinar = Math.floor(Math.random() * 11);
+        var intento;
+
+        // Bucle para pedir al usuario que adivine hasta que acierte
+        do {
+            intento = parseInt(prompt("Adivina el número entre 0 y 10:"));
+
+            if (intento < numeroAdivinar) {
+                alert("Tu número ingresado es menor que el número a adivinar.");
+            } else if (intento > numeroAdivinar) {
+                alert("Tu número ingresado es mayor que el número a adivinar.");
+            } else if (intento === numeroAdivinar) {
+                alert("¡Felicidades! Has adivinado el número.");
+            } else {
+                alert("Por favor, ingresa un número válido.");
+            }
+
+        } while (intento !== numeroAdivinar);
+    </script>
+</head>
+<body>
+</body>
+</html>

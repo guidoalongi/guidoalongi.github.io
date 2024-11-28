@@ -1,0 +1,29 @@
+body{
+    font-family: Arial;
+}
+h1, h2{
+    color: blue;
+}
+h3{
+    color: orange
+}
+em{
+    font-style: normal;
+    font-weight: bold;
+}
+#presentacion{
+    color: red;
+}
+#disenoMultimedial{
+    color:rgb(68, 195, 68);
+}
+#disenoWeb{
+    color: peru;
+}
+#cursosCortos{
+    color: gray;
+}
+#cursosFormacionProfesional{
+    color: magenta
+}
+

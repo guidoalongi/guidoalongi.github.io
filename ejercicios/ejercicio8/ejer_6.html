@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer_6</title>
+    <script>
+        // Función para solicitar el nombre y mostrar un saludo
+        function saludar() {
+            var nombre = prompt("Por favor, ingresa tu nombre:");
+            if (nombre) {
+                alert("¡Hola, " + nombre + "! Bienvenido!");
+            } else {
+                alert("No ingresaste un nombre.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Click para saludar</h2>
+    <button onclick="saludar()">Saludar</button>
+</body>
+</html>

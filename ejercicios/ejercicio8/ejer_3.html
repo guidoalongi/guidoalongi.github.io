@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer_3</title>
+
+    <script>
+         var lado1 = parseFloat(prompt("Ingrese el lado 1 del triangulo"));
+         var lado2 = parseFloat(prompt("Ingrese el lado 2 del triangulo"));
+         var lado3 = parseFloat(prompt("Ingrese el lado 3 del triangulo"));
+
+
+        var tipo_triangulo;
+        if (lado1 === lado2 && lado2 === lado3) {
+            tipo_triangulo = "Equilatero";
+        } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+            tipo_triangulo = "Isosceles";
+        } else {
+            tipo_triangulo = "Escaleno";
+        }
+
+    </script>
+</head>
+<body>
+    <script>
+        console.log("El triangulo es:",tipo_triangulo)
+    </script>
+</body>
+</html>
